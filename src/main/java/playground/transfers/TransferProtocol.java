@@ -45,4 +45,18 @@ public interface TransferProtocol {
             return value;
         }
     }
+
+    public class WithdrawReserved implements TransferProtocol {
+        private final String transferId;
+
+        public WithdrawReserved(String transferId) {
+            this.transferId = transferId;
+        }
+
+        @Override
+        public String getTransferId() {
+            return transferId;
+        }
+
+    }
 }
